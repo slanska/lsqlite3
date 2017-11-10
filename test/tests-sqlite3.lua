@@ -34,7 +34,6 @@ local sqlite3 = require(arg[1]) -- "lsqlite3complete" or "lsqlite3"
 
 local os = os
 
---local lunit = require "lunitx"
 local lunit = require "lunit"
 
 local tests_sqlite3

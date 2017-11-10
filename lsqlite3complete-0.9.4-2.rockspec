@@ -24,7 +24,16 @@ build = {
     modules = {
         lsqlite3complete = {
             sources = { "lsqlite3.c", "sqlite3.c" },
-            defines = {'LSQLITE_VERSION="0.9.4"', 'luaopen_lsqlite3=luaopen_lsqlite3complete'}
+            defines = {'LSQLITE_VERSION="0.9.4"',
+            'luaopen_lsqlite3=luaopen_lsqlite3complete',
+            'SQLITE_ENABLE_JSON1',
+
+            'SQLITE_ENABLE_FTS5',
+            'SQLITE_ENABLE_RTREE',
+            'SQLITE_ENABLE_FTS4',
+            'SQLITE_ENABLE_FTS3_PARENTHESIS',
+            'SQLITE_ENABLE_FTS3',
+            'SQLITE_SOUNDEX'}
         },
     },
     platforms = {

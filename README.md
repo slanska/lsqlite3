@@ -28,9 +28,7 @@ The following fixes and improvements have been applied:
 
 * **lsqlite3complete** is built with [FTS3/FTS4](http://sqlite.org/fts3.html), 
 [FTS5](http://sqlite.org/fts5.html), [RTREE](http://sqlite.org/rtree.html), 
-[JSON1](http://sqlite.org/json1.html), [ICU](http://site.icu-project.org) enabled
-
-* **lsqlite3** fixes issue _"Symbol not found: \_sqlite3_enable_load_extension"_
+[JSON1](http://sqlite.org/json1.html) enabled
 
 ### Installation Notes
 
