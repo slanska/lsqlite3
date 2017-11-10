@@ -34,6 +34,16 @@ The following fixes and improvements have been applied:
 
 Recommended installation flow:
 
+**On Linux** you may need to install SQLite library:
+
+For example, on Ubuntu:
+```shell
+sudo apt-get sqlite3
+sudo apt-get install libsqlite3-dev
+```
+
+Install on LuaRocks
+
 ```shell
 git clone https://github.com/slanska/lsqlite3.git
 cd  lsqlite3
