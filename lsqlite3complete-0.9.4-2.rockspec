@@ -33,7 +33,10 @@ build = {
             'SQLITE_ENABLE_FTS4',
             'SQLITE_ENABLE_FTS3_PARENTHESIS',
             'SQLITE_ENABLE_FTS3',
-            'SQLITE_SOUNDEX'}
+            'SQLITE_SOUNDEX'},
+            includes = {
+            '.'
+            }
         },
     },
     platforms = {
