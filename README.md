@@ -24,11 +24,16 @@ Lua 5 is available from http://www.lua.org/
 
 The following fixes and improvements have been applied:
 
-* **lsqlite3complete** is built with recent version of SQLite (3.21.0, of October 24, 2017)
+* **lsqlite3complete** is built with recent version of SQLite (3.24.0, of June 16, 2018)
 
 * **lsqlite3complete** is built with [FTS3/FTS4](http://sqlite.org/fts3.html), 
 [FTS5](http://sqlite.org/fts5.html), [RTREE](http://sqlite.org/rtree.html), 
 [JSON1](http://sqlite.org/json1.html) enabled
+
+* when source code is included into project directly and built in **lsqlite3complete**
+mode, a new define LSQLITE_EXTENSION is available for building SQLite extension 
+(_sqlite3ext.h_ will be used instead of _sqlite3.h_)
+ 
 
 ### Installation Notes
 
