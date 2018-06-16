@@ -3,7 +3,7 @@
 LIBNAME= lsqlite3
 LIBNAME2= lsqlite3complete
 
-LUAEXE= lua
+LUAEXE= luajit
 
 ROCKSPEC= $(shell find . -name $(LIBNAME)-*-*.rockspec)
 ROCKSPEC2= $(shell find . -name $(LIBNAME2)-*-*.rockspec)

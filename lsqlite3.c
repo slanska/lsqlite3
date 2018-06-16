@@ -54,7 +54,11 @@
 #endif
 #endif
 
+#if LSQLITE_EXTENSION
+#include "sqlite3ext.h"
+#else
 #include "sqlite3.h"
+#endif
 
 /* compile time features */
 #if !defined(SQLITE_OMIT_PROGRESS_CALLBACK)

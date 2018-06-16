@@ -1,3 +1,8 @@
+2018-June-16 [slanska]
+
+* Upgraded SQLite sources to 3.24.0
+* Added LSQLITE_EXTENSION conditonal define to be used in SQLite extensions
+
 2016-November-13
 
 Version "0.9.4"
