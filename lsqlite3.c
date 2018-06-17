@@ -59,9 +59,15 @@ extern "C" {
 #endif
 
 #if LSQLITE_EXTENSION
+
 #include "sqlite3ext.h"
+
+SQLITE_EXTENSION_INIT3
+
 #else
+
 #include "sqlite3.h"
+
 #endif
 
 /* compile time features */
@@ -2607,6 +2613,9 @@ LUALIB_API int luaopen_lsqlite3(lua_State *L)
 
     /* register (local) sqlite metatable */
     luaL_register(L, "sqlite3", sqlitelib);
+
+    // slanska: alias for using in bundled mode
+    luaL_register(L, "lsqlite3complete", sqlitelib);
 
     {
         int i = 0;
