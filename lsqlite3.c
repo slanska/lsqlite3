@@ -58,7 +58,7 @@ extern "C" {
 #endif
 #endif
 
-#if LSQLITE_EXTENSION
+#ifdef LSQLITE_EXTENSION
 
 #include "sqlite3ext.h"
 
@@ -2466,7 +2466,10 @@ static const luaL_Reg dblib[] = {
         {"create_function", db_create_function},
         {"create_aggregate", db_create_aggregate},
         {"create_collation", db_create_collation},
+
+#ifndef LSQLITE_EXTENSION
         {"load_extension", db_load_extension},
+#endif
 
         {"trace", db_trace},
         {"progress_handler", db_progress_handler},
@@ -2580,7 +2583,9 @@ static const luaL_Reg sqlitelib[] = {
         {"version", lsqlite_version},
         {"complete", lsqlite_complete},
 #ifndef _WIN32
+#ifndef LSQLITE_EXTENSION
         {"temp_directory", lsqlite_temp_directory},
+#endif
 #endif
         {"open", lsqlite_open},
         {"open_memory", lsqlite_open_memory},
