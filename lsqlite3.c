@@ -1343,6 +1343,7 @@ static int db_create_collation(lua_State *L)
     return 0;
 }
 
+#ifndef LSQLITE_EXTENSION
 /* Thanks to Wolfgang Oertl...
 */
 static int db_load_extension(lua_State *L)
@@ -1374,6 +1375,7 @@ static int db_load_extension(lua_State *L)
     sqlite3_free(errmsg);
     return 2;
 }
+#endif
 
 /*
 ** trace callback:
@@ -2260,6 +2262,8 @@ static int lsqlite_complete(lua_State *L)
 
 #ifndef _WIN32
 
+#ifndef LSQLITE_EXTENSION
+
 static int lsqlite_temp_directory(lua_State *L)
 {
     const char *oldtemp = sqlite3_temp_directory;
@@ -2284,6 +2288,7 @@ static int lsqlite_temp_directory(lua_State *L)
     return 1;
 }
 
+#endif
 #endif
 
 static int lsqlite_do_open(lua_State *L, const char *filename, int flags)

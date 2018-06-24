@@ -1,3 +1,7 @@
+2018-June-23 [slanska]
+
+* Fixed build when compiled for SQLite extension
+
 2018-June-16 [slanska]
 
 * Upgraded SQLite sources to 3.24.0
